@@ -1,0 +1,2 @@
+Invoking command in '/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/build/six_axis_robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/build/six_axis_robot -- -j4 -l4
+Invoked command in '/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/build/six_axis_robot' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/build/six_axis_robot -- -j4 -l4

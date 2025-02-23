@@ -1,0 +1,6 @@
+[31mCMake Error at cmake_install.cmake:46 (file):
+  file INSTALL cannot find
+  "/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/config": No such file
+  or directory.
+
+[0m

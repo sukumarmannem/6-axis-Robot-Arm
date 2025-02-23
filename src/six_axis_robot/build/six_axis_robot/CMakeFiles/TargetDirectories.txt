@@ -1,0 +1,9 @@
+/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/build/six_axis_robot/CMakeFiles/uninstall.dir
+/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/build/six_axis_robot/CMakeFiles/six_axis_robot_uninstall.dir
+/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/build/six_axis_robot/CMakeFiles/test.dir
+/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/build/six_axis_robot/CMakeFiles/edit_cache.dir
+/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/build/six_axis_robot/CMakeFiles/rebuild_cache.dir
+/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/build/six_axis_robot/CMakeFiles/list_install_components.dir
+/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/build/six_axis_robot/CMakeFiles/install.dir
+/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/build/six_axis_robot/CMakeFiles/install/local.dir
+/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/build/six_axis_robot/CMakeFiles/install/strip.dir

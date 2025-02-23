@@ -1,0 +1,17 @@
+/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/six_axis_robot/urdf/robot_model_6_dof.urdf.xacro
+/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/six_axis_robot/launch/robot_6_dof.launch.py
+/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/ament_index/resource_index/package_run_dependencies/six_axis_robot
+/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/ament_index/resource_index/parent_prefix_path/six_axis_robot
+/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/six_axis_robot/environment/ament_prefix_path.sh
+/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/six_axis_robot/environment/ament_prefix_path.dsv
+/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/six_axis_robot/environment/path.sh
+/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/six_axis_robot/environment/path.dsv
+/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/six_axis_robot/local_setup.bash
+/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/six_axis_robot/local_setup.sh
+/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/six_axis_robot/local_setup.zsh
+/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/six_axis_robot/local_setup.dsv
+/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/six_axis_robot/package.dsv
+/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/ament_index/resource_index/packages/six_axis_robot
+/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/six_axis_robot/cmake/six_axis_robotConfig.cmake
+/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/six_axis_robot/cmake/six_axis_robotConfig-version.cmake
+/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/six_axis_robot/package.xml

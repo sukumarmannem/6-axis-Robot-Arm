@@ -1,7 +1,7 @@
 import math
 import time
 import numpy as np
-
+import matplotlib.pyplot as plt
 class Joint:
     def __init__(self, name, min_angle, max_angle, current_angle=0.0):
         self.name = name
@@ -50,12 +50,29 @@ class Robotarm:
     def forward_kinematics(self):
         positions = [(0, 0)]
         total_angle = 0   
+        x, y = 0, 0
         for joint, link_length in zip(self.joints, self.link_lengths):
             total_angle += joint.current_angle
             x = positions[-1][0] + link_length * math.cos(total_angle)
             y = positions[-1][1] + link_length * math.sin(total_angle)
             positions.append((x, y))
         return positions
+
+def visualize_robot(arm):
+        positions = arm.forward_kinematics()
+        xs = [p[0] for p in positions]
+        ys = [p[1] for p in positions]
+        plt.clf()
+        plt.plot(xs, ys, '-o', linewidth=4 ,markersize=8)
+        total_length = sum(arm.link_lengths)
+        plt.xlim(-total_length, total_length)
+        plt.ylim(-total_length, total_length)   
+        plt.title("Robot Arm")
+        plt.xlabel("x")
+        plt.ylabel("y")
+        plt.grid(True)
+        plt.pause(0.05)
+
 def main():
     joints = [
         Joint("Joint 1", -math.pi, math.pi, 0.0),
@@ -68,7 +85,9 @@ def main():
     link_lengths = [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
     arm = Robotarm(joints, link_lengths)   
     print("Initial joint angles:")
-    
+    plt.ion()
+    fig = plt.figure()
+    print("type 'q' to exit")
     while True:
         target_angles = []
         for i in range(6):
@@ -92,8 +111,8 @@ def main():
             movement_sequence = arm.interpolate_angles(target_angles, steps=30)
             for angles in movement_sequence:
                 arm.update_angles(angles)
-                positions = arm.forward_kinematics()
-                time.sleep(0.1)
+                visualize_robot(arm)
+                time.sleep(0.05)
             print("Final joint states (in degrees):")
             for joint in arm.joints:
                 print(joint)

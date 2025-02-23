@@ -1,0 +1,2 @@
+source;share/six_axis_robot/environment/ament_prefix_path.sh
+source;share/six_axis_robot/environment/path.sh

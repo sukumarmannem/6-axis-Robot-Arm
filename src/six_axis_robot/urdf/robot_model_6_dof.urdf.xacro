@@ -1,0 +1,301 @@
+<?xml version="1.0"?>
+<robot name="six-axis" xmlns:xacro="http://www.ros.org/wiki/xacro" xmlns:ros2_control="http://www.ros.org/wiki/ros2_control">
+  <!-- Colors -->
+  <material name="gray">
+    <color rgba="0.75 0.75 0.75 1.0"/>
+  </material>
+  <material name="silver">
+    <color rgba="0.9 0.9 0.98 1.0"/>
+  </material>
+
+  <!-- Fixed Base -->
+  <link name="base_link"/>
+
+  <!-- Fixed Joint -->
+  <joint name="j0" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="l0"/>
+    <axis xyz="0 0 0"/>
+    <limit lower="0" upper="0" effort="0" velocity="0"/>
+  </joint>
+
+  <link name="l0">
+    <inertial>
+      <origin xyz="0 0 0.025" rpy="0 0 0"/>
+      <mass value="2.0"/>
+      <inertia ixx="0.0093895308" ixy="0.0" ixz="0.0011882474"
+               iyx="0.0" iyy="0.01420739" iyz="9.2874266e-06"
+               izx="0.00011882474" izy="9.2874266e-06" izz="0.017661948"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <cylinder radius="0.1" length="0.05"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <material name="silver"/>
+    </visual>
+  </link>
+
+  <!-- Joint j1: Revolute (-2π to 2π) -->
+  <joint name="j1" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="l0"/>
+    <child link="l1"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-$(eval 2 * ${pi})" upper="$(eval 2 * ${pi})" effort="0" velocity="0"/>
+  </joint>
+
+  <link name="l1">
+    <inertial>
+      <origin xyz="0 0 0.25" rpy="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="0.13778118" ixy="5.1395441e-06" ixz="0.00021163457"
+               iyx="5.1395441e-06" iyy="0.13826689" iyz="0.011751288"
+               izx="0.00021163457" izy="0.011751288" izz="0.035020186"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <cylinder radius="0.03" length="0.2"/>
+      </geometry>
+      <origin xyz="0 0 0.1" rpy="0 0 0"/>
+      <material name="silver"/>
+    </visual>
+    <visual>
+      <geometry>
+        <sphere radius="0.035"/>
+      </geometry>
+      <origin xyz="0 0 0.2" rpy="0 0 0"/>
+      <material name="gray"/>
+    </visual>
+  </link>
+
+  <!-- Dummy Joint from l1 to l2 -->
+  <joint name="j_dummy_1_2" type="fixed">
+    <origin xyz="0 0 0.2" rpy="0 0 0"/>
+    <parent link="l1"/>
+    <child link="l2"/>
+  </joint>
+
+  <link name="l2">
+    <inertial>
+      <origin xyz="0.25 0 0" rpy="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="0.30406895" ixy="5.6383979e-04" ixz="0.44113010"
+               iyx="5.6383979e-04" iyy="1.9934350" iyz="1.2111129e-06"
+               izx="0.44113010" izy="1.2111129e-06" izz="1.7471456"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <cylinder radius="0.03" length="0.25"/>
+      </geometry>
+      <origin xyz="0.125 0 0" rpy="0  $(eval ${pi} / 2)  0"/>
+      <material name="silver"/>
+    </visual>
+    <visual>
+      <geometry>
+        <sphere radius="0.035"/>
+      </geometry>
+      <origin xyz="0.25 0 0" rpy="0 0 0"/>
+      <material name="gray"/>
+    </visual>
+  </link>
+
+  <!-- Joint j2: Revolute (-2π to 2π) -->
+  <joint name="j2" type="revolute">
+    <origin xyz="0.25 0 0" rpy="0 $(eval ${pi} / 2) 0"/>
+    <parent link="l2"/>
+    <child link="l3"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-$(eval 2 * ${pi})" upper="$(eval 2 * ${pi})" effort="0" velocity="0"/>
+  </joint>
+
+  <link name="l3">
+    <inertial>
+      <origin xyz="-0.15 0 0" rpy="0 0 0"/>
+      <mass value="3.0"/>
+      <inertia ixx="0.03198232" ixy="-1.5528529e-05" ixz="-4.89948e-05"
+               iyx="-1.5528529e-05" iyy="0.028261283" iyz="0.0071406845"
+               izx="-4.89948e-05" izy="0.0071406845" izz="0.0088063347"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <cylinder radius="0.03" length="0.3"/>
+      </geometry>
+      <origin xyz="-0.15 0 0" rpy="0 $(eval ${pi} / 2) 0"/>
+      <material name="silver"/>
+    </visual>
+    <visual>
+      <geometry>
+        <sphere radius="0.035"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <material name="gray"/>
+    </visual>
+  </link>
+
+  <!-- Joint j3: Revolute (-2π to 2π) -->
+  <joint name="j3" type="revolute">
+    <origin xyz="-0.30 0 0" rpy="0 0 0"/>
+    <parent link="l3"/>
+    <child link="l4"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-$(eval 2 * ${pi})" upper="$(eval 2 * ${pi})" effort="0" velocity="0"/>
+  </joint>
+
+  <link name="l4">
+    <inertial>
+      <origin xyz="0 0 -0.12" rpy="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="0.30406895" ixy="5.6383979e-04" ixz="0.44113010"
+               iyx="5.6383979e-04" iyy="1.9934350" iyz="1.2111129e-06"
+               izx="0.44113010" izy="1.2111129e-06" izz="1.7471456"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <cylinder radius="0.03" length="0.24"/>
+      </geometry>
+      <origin xyz="0 0 -0.12" rpy="0 0 0"/>
+      <material name="silver"/>
+    </visual>
+    <visual>
+      <geometry>
+        <sphere radius="0.035"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <material name="gray"/>
+    </visual>
+  </link>
+
+  <!-- Dummy Joint from l4 to l5 -->
+  <joint name="j_dummy" type="fixed">
+    <origin xyz="0 0 -0.24" rpy="0 0 0"/>
+    <parent link="l4"/>
+    <child link="l5"/>
+  </joint>
+
+  <link name="l5">
+    <inertial>
+      <origin xyz="-0.16 0 0" rpy="0 0 0"/>
+      <mass value="3.0"/>
+      <inertia ixx="0.013754675" ixy="-1.5528630e-05" ixz="-2.8051809e-05"
+               iyx="-1.5528630e-05" iyy="0.0099916676" iyz="0.00390233"
+               izx="-2.8051809e-05" izy="0.00390233" izz="0.0076137437"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <cylinder radius="0.03" length="0.32"/>
+      </geometry>
+      <origin xyz="-0.16 0 0" rpy="0 $(eval ${pi} / 2) 0"/>
+      <material name="silver"/>
+    </visual>
+    <visual>
+      <geometry>
+        <sphere radius="0.035"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <material name="gray"/>
+    </visual>
+  </link>
+
+  <!-- Joint j4: Revolute (-2π to 2π) -->
+  <joint name="j4" type="revolute">
+    <origin xyz="-0.32 0 0" rpy="0 0 0"/>
+    <parent link="l5"/>
+    <child link="l6"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-$(eval 2 * ${pi})" upper="$(eval 2 * ${pi})" effort="0" velocity="0"/>
+  </joint>
+
+  <link name="l6">
+    <inertial>
+      <origin xyz="0 0 0.125" rpy="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="9.3016047e-04" ixy="-2.9405026e-07" ixz="1.0421409e-05"
+               iyx="-2.9405026e-07" iyy="9.5021553e-04" iyz="-1.7371494e-06"
+               izx="1.0421409e-05" izy="-1.7371494e-06" izz="8.4567154e-04"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <cylinder radius="0.03" length="0.25"/>
+      </geometry>
+      <origin xyz="0 0 0.125" rpy="0 0 0"/>
+      <material name="silver"/>
+    </visual>
+    <visual>
+      <geometry>
+        <sphere radius="0.035"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <material name="gray"/>
+    </visual>
+  </link>
+
+  <!-- Joint j5: Revolute (-2π to 2π) -->
+  <joint name="j5" type="revolute">
+    <origin xyz="0 0 0.25" rpy="0 $(eval -1 * ${pi} / 2) $(eval 2 * ${pi})"/>
+    <parent link="l6"/>
+    <child link="le"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-$(eval 2 * ${pi})" upper="$(eval 2 * ${pi})" effort="0" velocity="0"/>
+  </joint>
+
+  <link name="le">
+    <inertial>
+      <origin xyz="0 0 0.09" rpy="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="9.3016047e-04" ixy="-2.9405026e-07" ixz="1.0421409e-05"
+               iyx="-2.9405026e-07" iyy="9.5021553e-04" iyz="-1.7371494e-06"
+               izx="1.0421409e-05" izy="-1.7371494e-06" izz="8.4567154e-04"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <cylinder radius="0.03" length="0.18"/>
+      </geometry>
+      <origin xyz="0 0 0.09" rpy="0 0 0"/>
+      <material name="silver"/>
+    </visual>
+    <visual>
+      <geometry>
+        <sphere radius="0.035"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <material name="gray"/>
+    </visual>
+  </link>
+
+  <!-- Joint j6: Revolute (-2π to 2π) -->
+  <joint name="j6" type="revolute">
+    <origin xyz="0 0 0.18" rpy="0 $(eval ${pi} / 2) 0"/>
+    <parent link="le"/>
+    <child link="le_1"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-$(eval 2 * ${pi})" upper="$(eval 2 * ${pi})" effort="0" velocity="0"/>
+  </joint>
+
+  <link name="le_1">
+    <inertial>
+      <origin xyz="0 0 0.05" rpy="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="9.3016047e-04" ixy="-2.9405026e-07" ixz="1.0421409e-05"
+               iyx="-2.9405026e-07" iyy="9.5021553e-04" iyz="-1.7371494e-06"
+               izx="1.0421409e-05" izy="-1.7371494e-06" izz="8.4567154e-04"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <cylinder radius="0.03" length="0.1"/>
+      </geometry>
+      <origin xyz="0 0 0.05" rpy="0 0 0"/>
+      <material name="gray"/>
+    </visual>
+    <visual>
+      <geometry>
+        <sphere radius="0.035"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <material name="gray"/>
+    </visual>
+  </link>
+
+</robot>
+

@@ -1,0 +1,67 @@
+[0.015s] Invoking command in '/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/build/six_axis_robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot -DCMAKE_INSTALL_PREFIX=/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot
+[0.083s] -- The C compiler identification is GNU 11.4.0
+[0.149s] -- The CXX compiler identification is GNU 11.4.0
+[0.158s] -- Detecting C compiler ABI info
+[0.246s] -- Detecting C compiler ABI info - done
+[0.252s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.252s] -- Detecting C compile features
+[0.253s] -- Detecting C compile features - done
+[0.256s] -- Detecting CXX compiler ABI info
+[0.354s] -- Detecting CXX compiler ABI info - done
+[0.359s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.359s] -- Detecting CXX compile features
+[0.361s] -- Detecting CXX compile features - done
+[0.362s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.522s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.642s] -- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+[0.678s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.682s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.690s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.700s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.714s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.751s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.753s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.862s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.890s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.934s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.941s] -- Looking for pthread.h
+[1.045s] -- Looking for pthread.h - found
+[1.048s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.139s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.140s] -- Found Threads: TRUE  
+[1.185s] -- Found robot_state_publisher: 3.0.3 (/opt/ros/humble/share/robot_state_publisher/cmake)
+[1.211s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.211s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.211s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.346s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.485s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.485s] -- Configured cppcheck include dirs: 
+[1.485s] -- Configured cppcheck exclude dirs and/or files: 
+[1.488s] -- Added test 'lint_cmake' to check CMake code style
+[1.495s] -- Added test 'uncrustify' to check C / C++ code style
+[1.495s] -- Configured uncrustify additional arguments: 
+[1.496s] -- Added test 'xmllint' to check XML markup files
+[1.497s] -- Configuring done
+[1.506s] -- Generating done
+[1.510s] -- Build files have been written to: /home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/build/six_axis_robot
+[1.522s] Invoked command in '/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/build/six_axis_robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot -DCMAKE_INSTALL_PREFIX=/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot
+[1.525s] Invoking command in '/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/build/six_axis_robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/build/six_axis_robot -- -j4 -l4
+[1.579s] Invoked command in '/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/build/six_axis_robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/build/six_axis_robot -- -j4 -l4
+[1.592s] Invoking command in '/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/build/six_axis_robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/build/six_axis_robot
+[1.600s] -- Install configuration: ""
+[1.601s] -- Installing: /home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/ament_index/resource_index/package_run_dependencies/six_axis_robot
+[1.601s] -- Installing: /home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/ament_index/resource_index/parent_prefix_path/six_axis_robot
+[1.601s] -- Installing: /home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/six_axis_robot/environment/ament_prefix_path.sh
+[1.601s] -- Installing: /home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/six_axis_robot/environment/ament_prefix_path.dsv
+[1.602s] -- Installing: /home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/six_axis_robot/environment/path.sh
+[1.602s] -- Installing: /home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/six_axis_robot/environment/path.dsv
+[1.602s] -- Installing: /home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/six_axis_robot/local_setup.bash
+[1.602s] -- Installing: /home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/six_axis_robot/local_setup.sh
+[1.603s] -- Installing: /home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/six_axis_robot/local_setup.zsh
+[1.603s] -- Installing: /home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/six_axis_robot/local_setup.dsv
+[1.603s] -- Installing: /home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/six_axis_robot/package.dsv
+[1.603s] -- Installing: /home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/ament_index/resource_index/packages/six_axis_robot
+[1.604s] -- Installing: /home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/six_axis_robot/cmake/six_axis_robotConfig.cmake
+[1.604s] -- Installing: /home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/six_axis_robot/cmake/six_axis_robotConfig-version.cmake
+[1.604s] -- Installing: /home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/install/six_axis_robot/share/six_axis_robot/package.xml
+[1.607s] Invoked command in '/home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/build/six_axis_robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/sukumar7/6-axis-Robot-Arm/src/six_axis_robot/build/six_axis_robot
